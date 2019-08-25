@@ -6,3 +6,11 @@ RabbitMQ
 /usr/local/sbin/rabbitmq-server
 
 amqp://guest:guest@localhost:5672/
+
+Sample dockerfile
+
+FROM rabbitmq
+
+RUN rabbitmq-plugins enable --offline rabbitmq_management
+
+EXPOSE 15671 15672
