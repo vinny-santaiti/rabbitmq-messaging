@@ -17,6 +17,7 @@ EXPOSE 15671 15672
 ```
 Alternate method to install:
 ```
-docker run -d -p 5672:5672 -p 15672:15672 macintoshplus/rabbitmq-management
+docker pull rabbitmq:3-management
+docker run -d --hostname my-rabbit --name rabbitmq-management -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 Manage containers with gui app: [kitematic](https://github.com/docker/kitematic/releases)
